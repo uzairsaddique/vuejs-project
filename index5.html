@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>
+        Learn Vue3
+    </title>
+</head>
+
+<body>
+
+    <div id="games">
+        <select v-model="mychoice" multiple>
+            <option value="football">football</option>
+            <option value="cricket">cricket</option>
+            <option value="tennis">tennis</option>
+
+        </select>
+        <h1>TO select multiple holde the value key on your keybord</h1>
+        <h1>{{mychoice}}</h1>
+        <button @click="cleardata">Clear</button>
+        
+      
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script>
+        console.log("Script started")
+
+        const myvuecomponent = new Vue({
+            el : "#games",
+            data : {
+                mychoice : []
+            },
+            methods: {
+                cleardata(){
+                    console.log("clear data")
+                    this.mychoice = []
+                }
+  }
+        })
+        console.log("Script ended")
+
+    </script>
+</body>
+
+</html>

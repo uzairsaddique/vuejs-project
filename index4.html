@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>
+        Learn Vue3
+    </title>
+</head>
+
+<body>
+
+    <div id="myapp">
+        <input type="radio" id="male" value="male" name="gender" v-model="gender">
+        <label for="male">male</label>
+        <input type="radio" id="female" value="female" name="gender" v-model="gender">
+        <label for="female">female</label>
+        <h1>{{gender}}</h1>
+      
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script>
+        console.log("Script started")
+
+        const myvuecomponent = new Vue({
+            el : "#myapp",
+            data : {
+                gender : null
+            },
+            methods: {
+    reverseMessage: function () {
+      this.title = this.title.split('').reverse().join('')
+    }
+  }
+        })
+        console.log("Script ended")
+
+    </script>
+</body>
+
+</html>
